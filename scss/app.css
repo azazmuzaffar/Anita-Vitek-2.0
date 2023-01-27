@@ -51,6 +51,11 @@ li {
   height: 100vh;
   padding: 0 20px;
 }
+@media (max-width: 992px) {
+  .hero-banner {
+    cursor: default !important;
+  }
+}
 @media (max-width: 768px) {
   .hero-banner {
     height: 85vh;
