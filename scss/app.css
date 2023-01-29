@@ -5,6 +5,7 @@
 /* ---------- Fonts ----------- */
 /*-----------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 /*-----------------------------*/
 /* ------- Generic CSS -------- */
 /*-----------------------------*/
@@ -18,6 +19,8 @@ body {
   font-kerning: none;
   font-size: 25px;
   overflow-x: hidden;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
   background: white;
   font-weight: 400;
   margin: 0;
@@ -36,6 +39,45 @@ ul,
 li {
   margin: 0;
   padding: 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.image-ratio {
+  position: relative;
+  width: 100%;
+}
+.image-ratio > img,
+.image-ratio > video,
+.image-ratio > iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.image-ratio--16-9 {
+  padding-top: 56.25%;
+}
+.image-ratio--square {
+  padding-top: 100%;
+}
+.image-ratio--contain > img,
+.image-ratio--contain > video,
+.image-ratio--contain > iframe {
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
 }
 
 /*-----------------------------*/
@@ -194,6 +236,193 @@ li {
 }
 .hero-banner .play__video.show .pause {
   display: block;
+}
+
+.design-concept {
+  height: 100vh;
+  overflow: hidden;
+}
+.design-concept__inner--scroll {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  left: 0;
+}
+.design-concept__inner--scroll .concept {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.design-concept__inner--scroll .concept__each {
+  height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden;
+}
+.design-concept__inner--scroll .concept__each .icon-wrapper {
+  text-align: center;
+}
+.design-concept__inner--scroll .concept__each .image-wrapper,
+.design-concept__inner--scroll .concept__each .image-ratio {
+  overflow: hidden;
+}
+.design-concept__inner--scroll .concept__each .image-ratio img {
+  transition: 4.5s all ease;
+  filter: grayscale(0.4);
+}
+.design-concept__inner--scroll .concept__each .image-ratio img:hover {
+  transform: scale(1.1);
+  filter: grayscale(0);
+}
+.design-concept__inner--scroll .concept__each--1 {
+  position: relative;
+  padding: 60px 50px;
+  background: black;
+  color: white;
+}
+@-webkit-keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+    filter: blur(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+    filter: blur(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+.design-concept__inner--scroll .concept__each--1 .image-ratio {
+  -webkit-animation: slideInFromLeft ease 2s;
+          animation: slideInFromLeft ease 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.design-concept__inner--scroll .concept__each--1 .concept__each-right {
+  height: 100%;
+}
+.design-concept__inner--scroll .concept__each--1 .concept__each-right .image-wrapper {
+  height: 100%;
+  display: flex;
+}
+.design-concept__inner--scroll .concept__each--1 .concept__each-right .image-wrapper .image-ratio {
+  padding-top: 156%;
+  margin-top: auto;
+}
+.design-concept__inner--scroll .concept__each--2 {
+  background: white;
+  color: black;
+}
+.design-concept__inner--scroll .concept__each--2 .icon-wrapper {
+  padding: 70px 0;
+}
+.design-concept__inner--scroll .concept__each--2 .concept__each-left .content-block .text-wrapper {
+  padding: 20px 30px;
+}
+.design-concept__inner--scroll .concept__each--2 .concept__each-right {
+  height: 100%;
+}
+.design-concept__inner--scroll .concept__each--2 .concept__each-right .image-wrapper {
+  height: 100%;
+  display: flex;
+}
+.design-concept__inner--scroll .concept__each--2 .concept__each-right .image-wrapper .image-ratio {
+  padding-top: 150%;
+  margin-top: auto;
+}
+.design-concept__inner--scroll .concept__each--3 {
+  position: relative;
+  background: black;
+  color: white;
+}
+.design-concept__inner--scroll .concept__each--3 .icons {
+  padding: 70px 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.design-concept__inner--scroll .concept__each--3 .icons .icon-wrapper--2 {
+  margin-top: auto;
+  margin-bottom: 17%;
+}
+.design-concept__inner--scroll .concept__each--3 .concept__each-left {
+  padding: 40px 0 50px 70px;
+  height: 100%;
+}
+.design-concept__inner--scroll .concept__each--3 .concept__each-left .content-block {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.design-concept__inner--scroll .concept__each--3 .concept__each-left .content-block .text-wrapper {
+  text-align: right;
+  margin-bottom: 3vh;
+}
+.design-concept__inner--scroll .concept__each--3 .concept__each-left .content-block .text-wrapper h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.15vw;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.design-concept__inner--scroll .concept__each--3 .concept__each-left .content-block .image-wrapper {
+  margin-top: auto;
+}
+.design-concept__inner--scroll .concept__each--3 .concept__each-right {
+  height: 100%;
+}
+.design-concept__inner--scroll .concept__each--3 .concept__each-right .image-wrapper .image-ratio {
+  padding-top: 150%;
+}
+.design-concept__inner--scroll .concept__each--3 .concept__each-right .text-wrapper {
+  margin-top: 3vh;
+}
+.design-concept__inner--scroll .concept__each--3 .concept__each-right .text-wrapper h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.15vw;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.design-concept__inner--scroll .concept__each-left .content-block .image-wrapper {
+  position: relative;
+}
+.design-concept__inner--scroll .concept__each-left .content-block .image-wrapper .image-ratio {
+  padding-top: 66%;
+}
+.design-concept__inner--scroll .concept__each-left .content-block .image-wrapper .overlay-text {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  text-align: center;
+  padding: 0.8vw 0;
+}
+.design-concept__inner--scroll .concept__each-left .content-block .image-wrapper .overlay-text h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.15vw;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.design-concept__inner--scroll .concept__each-left .content-block .text-wrapper {
+  padding: 20px 0;
+}
+.design-concept__inner--scroll .concept__each-left .content-block .text-wrapper h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.2vw;
+  font-weight: 500;
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<  */
