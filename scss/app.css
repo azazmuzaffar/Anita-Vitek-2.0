@@ -248,33 +248,33 @@ li {
   display: flex;
   left: 0;
 }
-.design-concept__inner--scroll .concept {
+.design-concept .concept {
   height: 100vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.design-concept__inner--scroll .concept__each {
+.design-concept .concept__each {
   height: 100vh;
   min-width: 100vw;
   overflow-x: hidden;
 }
-.design-concept__inner--scroll .concept__each .icon-wrapper {
+.design-concept .concept__each .icon-wrapper {
   text-align: center;
 }
-.design-concept__inner--scroll .concept__each .image-wrapper,
-.design-concept__inner--scroll .concept__each .image-ratio {
+.design-concept .concept__each .image-wrapper,
+.design-concept .concept__each .image-ratio {
   overflow: hidden;
 }
-.design-concept__inner--scroll .concept__each .image-ratio img {
+.design-concept .concept__each .image-ratio img {
   transition: 4.5s all ease;
   filter: grayscale(0.4);
 }
-.design-concept__inner--scroll .concept__each .image-ratio img:hover {
+.design-concept .concept__each .image-ratio img:hover {
   transform: scale(1.1);
   filter: grayscale(0);
 }
-.design-concept__inner--scroll .concept__each--1 {
+.design-concept .concept__each--1 {
   position: relative;
   padding: 60px 50px;
   background: black;
@@ -304,7 +304,7 @@ li {
     filter: blur(0);
   }
 }
-.design-concept__inner--scroll .concept__each--1 .image-ratio {
+.design-concept .concept__each--1 .image-ratio {
   -webkit-animation: slideInFromLeft ease 2s;
           animation: slideInFromLeft ease 2s;
   -webkit-animation-iteration-count: 1;
@@ -312,97 +312,97 @@ li {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-.design-concept__inner--scroll .concept__each--1 .concept__each-right {
+.design-concept .concept__each--1 .concept__each-right {
   height: 100%;
 }
-.design-concept__inner--scroll .concept__each--1 .concept__each-right .image-wrapper {
+.design-concept .concept__each--1 .concept__each-right .image-wrapper {
   height: 100%;
   display: flex;
 }
-.design-concept__inner--scroll .concept__each--1 .concept__each-right .image-wrapper .image-ratio {
+.design-concept .concept__each--1 .concept__each-right .image-wrapper .image-ratio {
   padding-top: 156%;
   margin-top: auto;
 }
-.design-concept__inner--scroll .concept__each--2 {
+.design-concept .concept__each--2 {
   background: white;
   color: black;
 }
-.design-concept__inner--scroll .concept__each--2 .icon-wrapper {
+.design-concept .concept__each--2 .icon-wrapper {
   padding: 70px 0;
 }
-.design-concept__inner--scroll .concept__each--2 .concept__each-left .content-block .text-wrapper {
+.design-concept .concept__each--2 .concept__each-left .content-block .text-wrapper {
   padding: 20px 30px;
 }
-.design-concept__inner--scroll .concept__each--2 .concept__each-right {
+.design-concept .concept__each--2 .concept__each-right {
   height: 100%;
 }
-.design-concept__inner--scroll .concept__each--2 .concept__each-right .image-wrapper {
+.design-concept .concept__each--2 .concept__each-right .image-wrapper {
   height: 100%;
   display: flex;
 }
-.design-concept__inner--scroll .concept__each--2 .concept__each-right .image-wrapper .image-ratio {
+.design-concept .concept__each--2 .concept__each-right .image-wrapper .image-ratio {
   padding-top: 150%;
   margin-top: auto;
 }
-.design-concept__inner--scroll .concept__each--3 {
+.design-concept .concept__each--3 {
   position: relative;
   background: black;
   color: white;
 }
-.design-concept__inner--scroll .concept__each--3 .icons {
+.design-concept .concept__each--3 .icons {
   padding: 70px 0;
   display: flex;
   flex-direction: column;
   height: 100%;
 }
-.design-concept__inner--scroll .concept__each--3 .icons .icon-wrapper--2 {
+.design-concept .concept__each--3 .icons .icon-wrapper--2 {
   margin-top: auto;
   margin-bottom: 17%;
 }
-.design-concept__inner--scroll .concept__each--3 .concept__each-left {
+.design-concept .concept__each--3 .concept__each-left {
   padding: 40px 0 50px 70px;
   height: 100%;
 }
-.design-concept__inner--scroll .concept__each--3 .concept__each-left .content-block {
+.design-concept .concept__each--3 .concept__each-left .content-block {
   height: 100%;
   display: flex;
   flex-direction: column;
 }
-.design-concept__inner--scroll .concept__each--3 .concept__each-left .content-block .text-wrapper {
+.design-concept .concept__each--3 .concept__each-left .content-block .text-wrapper {
   text-align: right;
   margin-bottom: 3vh;
 }
-.design-concept__inner--scroll .concept__each--3 .concept__each-left .content-block .text-wrapper h2 {
+.design-concept .concept__each--3 .concept__each-left .content-block .text-wrapper h2 {
   font-family: "Playfair Display", serif;
   font-size: 3.15vw;
   font-weight: 400;
   text-transform: uppercase;
 }
-.design-concept__inner--scroll .concept__each--3 .concept__each-left .content-block .image-wrapper {
+.design-concept .concept__each--3 .concept__each-left .content-block .image-wrapper {
   margin-top: auto;
 }
-.design-concept__inner--scroll .concept__each--3 .concept__each-right {
+.design-concept .concept__each--3 .concept__each-right {
   height: 100%;
 }
-.design-concept__inner--scroll .concept__each--3 .concept__each-right .image-wrapper .image-ratio {
+.design-concept .concept__each--3 .concept__each-right .image-wrapper .image-ratio {
   padding-top: 150%;
 }
-.design-concept__inner--scroll .concept__each--3 .concept__each-right .text-wrapper {
+.design-concept .concept__each--3 .concept__each-right .text-wrapper {
   margin-top: 3vh;
 }
-.design-concept__inner--scroll .concept__each--3 .concept__each-right .text-wrapper h2 {
+.design-concept .concept__each--3 .concept__each-right .text-wrapper h2 {
   font-family: "Playfair Display", serif;
   font-size: 3.15vw;
   font-weight: 400;
   text-transform: uppercase;
 }
-.design-concept__inner--scroll .concept__each-left .content-block .image-wrapper {
+.design-concept .concept__each-left .content-block .image-wrapper {
   position: relative;
 }
-.design-concept__inner--scroll .concept__each-left .content-block .image-wrapper .image-ratio {
+.design-concept .concept__each-left .content-block .image-wrapper .image-ratio {
   padding-top: 66%;
 }
-.design-concept__inner--scroll .concept__each-left .content-block .image-wrapper .overlay-text {
+.design-concept .concept__each-left .content-block .image-wrapper .overlay-text {
   position: absolute;
   width: 100%;
   left: 0;
@@ -410,16 +410,16 @@ li {
   text-align: center;
   padding: 0.8vw 0;
 }
-.design-concept__inner--scroll .concept__each-left .content-block .image-wrapper .overlay-text h2 {
+.design-concept .concept__each-left .content-block .image-wrapper .overlay-text h2 {
   font-family: "Playfair Display", serif;
   font-size: 3.15vw;
   font-weight: 400;
   text-transform: uppercase;
 }
-.design-concept__inner--scroll .concept__each-left .content-block .text-wrapper {
+.design-concept .concept__each-left .content-block .text-wrapper {
   padding: 20px 0;
 }
-.design-concept__inner--scroll .concept__each-left .content-block .text-wrapper h3 {
+.design-concept .concept__each-left .content-block .text-wrapper h3 {
   font-family: "Poppins", sans-serif;
   font-size: 2.2vw;
   font-weight: 500;

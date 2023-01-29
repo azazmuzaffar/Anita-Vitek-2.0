@@ -274,220 +274,220 @@ li {
             overflow: hidden;
             display: flex;
             left: 0;
+        }
+    }
 
-            .concept {
-                height: 100vh;
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
+    .concept {
+        height: 100vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
 
-                &__each {
-                    height: 100vh;
-                    min-width: 100vw;
-                    overflow-x: hidden;
+        &__each {
+            height: 100vh;
+            min-width: 100vw;
+            overflow-x: hidden;
 
-                    .icon-wrapper {
-                        text-align: center;
+            .icon-wrapper {
+                text-align: center;
+            }
+
+            .image-wrapper,
+            .image-ratio {
+                overflow: hidden;
+            }
+
+            .image-ratio {
+                img {
+                    transition: 4.5s all ease;
+                    filter: grayscale(0.4);
+
+                    &:hover {
+                        transform: scale(1.1);
+                        filter: grayscale(0);
+                    }
+                }
+            }
+
+            &--1 {
+                position: relative;
+                padding: 60px 50px;
+                background: $black;
+                color: $white;
+
+                @keyframes slideInFromLeft {
+                    0% {
+                        opacity: 0;
+                        transform: scale(1.1);
+                        filter: blur(30px);
                     }
 
-                    .image-wrapper,
-                    .image-ratio {
-                        overflow: hidden;
+                    100% {
+                        opacity: 1;
+                        transform: scale(1);
+                        filter: blur(0);
                     }
+                }
 
-                    .image-ratio {
-                        img {
-                            transition: 4.5s all ease;
-                            filter: grayscale(0.4);
+                .image-ratio {
+                    animation: slideInFromLeft ease 2s;
+                    animation-iteration-count: 1;
+                    animation-fill-mode: forwards;
+                }
 
-                            &:hover {
-                                transform: scale(1.1);
-                                filter: grayscale(0);
-                            }
-                        }
-                    }
+                .concept__each {
+                    &-right {
+                        height: 100%;
 
-                    &--1 {
-                        position: relative;
-                        padding: 60px 50px;
-                        background: $black;
-                        color: $white;
-
-                        @keyframes slideInFromLeft {
-                            0% {
-                                opacity: 0;
-                                transform: scale(1.1);
-                                filter: blur(30px);
-                            }
-
-                            100% {
-                                opacity: 1;
-                                transform: scale(1);
-                                filter: blur(0);
-                            }
-                        }
-
-                        .image-ratio {
-                            animation: slideInFromLeft ease 2s;
-                            animation-iteration-count: 1;
-                            animation-fill-mode: forwards;
-                        }
-
-                        .concept__each {
-                            &-right {
-                                height: 100%;
-
-                                .image-wrapper {
-                                    height: 100%;
-                                    display: flex;
-
-                                    .image-ratio {
-                                        padding-top: 156%;
-                                        margin-top: auto;
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    &--2 {
-                        background: $white;
-                        color: $black;
-
-                        .icon-wrapper {
-                            padding: 70px 0;
-                        }
-
-                        .concept__each {
-                            &-left {
-                                .content-block {
-                                    .text-wrapper {
-                                        padding: 20px 30px;
-                                    }
-                                }
-                            }
-
-                            &-right {
-                                height: 100%;
-
-                                .image-wrapper {
-                                    height: 100%;
-                                    display: flex;
-
-                                    .image-ratio {
-                                        padding-top: 150%;
-                                        margin-top: auto;
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    &--3 {
-                        position: relative;
-                        background: $black;
-                        color: $white;
-
-                        .icons {
-                            padding: 70px 0;
-                            display: flex;
-                            flex-direction: column;
+                        .image-wrapper {
                             height: 100%;
+                            display: flex;
 
-                            .icon-wrapper {
-                                &--2 {
-                                    margin-top: auto;
-                                    margin-bottom: 17%;
-                                }
-                            }
-                        }
-
-                        .concept__each {
-                            &-left {
-                                padding: 40px 0 50px 70px;
-                                height: 100%;
-
-                                .content-block {
-                                    height: 100%;
-                                    display: flex;
-                                    flex-direction: column;
-
-                                    .text-wrapper {
-                                        text-align: right;
-                                        margin-bottom: 3vh;
-
-                                        h2 {
-                                            font-family: $font-playfare;
-                                            font-size: 3.15vw;
-                                            font-weight: 400;
-                                            text-transform: uppercase;
-                                        }
-                                    }
-
-                                    .image-wrapper {
-                                        margin-top: auto;
-                                    }
-                                }
-                            }
-
-                            &-right {
-                                height: 100%;
-
-                                .image-wrapper {
-                                    .image-ratio {
-                                        padding-top: 150%;
-                                    }
-                                }
-
-                                .text-wrapper {
-                                    margin-top: 3vh;
-
-                                    h2 {
-                                        font-family: $font-playfare;
-                                        font-size: 3.15vw;
-                                        font-weight: 400;
-                                        text-transform: uppercase;
-                                    }
-                                }
+                            .image-ratio {
+                                padding-top: 156%;
+                                margin-top: auto;
                             }
                         }
                     }
+                }
+            }
 
+            &--2 {
+                background: $white;
+                color: $black;
+
+                .icon-wrapper {
+                    padding: 70px 0;
+                }
+
+                .concept__each {
                     &-left {
                         .content-block {
-                            .image-wrapper {
-                                position: relative;
-
-                                .image-ratio {
-                                    padding-top: 66%;
-                                }
-
-                                .overlay-text {
-                                    position: absolute;
-                                    width: 100%;
-                                    left: 0;
-                                    top: 0;
-                                    text-align: center;
-                                    padding: 0.8vw 0;
-
-                                    h2 {
-                                        font-family: $font-playfare;
-                                        font-size: 3.15vw;
-                                        font-weight: 400;
-                                        text-transform: uppercase;
-                                    }
-                                }
+                            .text-wrapper {
+                                padding: 20px 30px;
                             }
+                        }
+                    }
+
+                    &-right {
+                        height: 100%;
+
+                        .image-wrapper {
+                            height: 100%;
+                            display: flex;
+
+                            .image-ratio {
+                                padding-top: 150%;
+                                margin-top: auto;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &--3 {
+                position: relative;
+                background: $black;
+                color: $white;
+
+                .icons {
+                    padding: 70px 0;
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+
+                    .icon-wrapper {
+                        &--2 {
+                            margin-top: auto;
+                            margin-bottom: 17%;
+                        }
+                    }
+                }
+
+                .concept__each {
+                    &-left {
+                        padding: 40px 0 50px 70px;
+                        height: 100%;
+
+                        .content-block {
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
 
                             .text-wrapper {
-                                padding: 20px 0;
+                                text-align: right;
+                                margin-bottom: 3vh;
 
-                                h3 {
-                                    font-family: $font-poppins;
-                                    font-size: 2.2vw;
-                                    font-weight: 500;
+                                h2 {
+                                    font-family: $font-playfare;
+                                    font-size: 3.15vw;
+                                    font-weight: 400;
+                                    text-transform: uppercase;
                                 }
                             }
+
+                            .image-wrapper {
+                                margin-top: auto;
+                            }
+                        }
+                    }
+
+                    &-right {
+                        height: 100%;
+
+                        .image-wrapper {
+                            .image-ratio {
+                                padding-top: 150%;
+                            }
+                        }
+
+                        .text-wrapper {
+                            margin-top: 3vh;
+
+                            h2 {
+                                font-family: $font-playfare;
+                                font-size: 3.15vw;
+                                font-weight: 400;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-left {
+                .content-block {
+                    .image-wrapper {
+                        position: relative;
+
+                        .image-ratio {
+                            padding-top: 66%;
+                        }
+
+                        .overlay-text {
+                            position: absolute;
+                            width: 100%;
+                            left: 0;
+                            top: 0;
+                            text-align: center;
+                            padding: 0.8vw 0;
+
+                            h2 {
+                                font-family: $font-playfare;
+                                font-size: 3.15vw;
+                                font-weight: 400;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+
+                    .text-wrapper {
+                        padding: 20px 0;
+
+                        h3 {
+                            font-family: $font-poppins;
+                            font-size: 2.2vw;
+                            font-weight: 500;
                         }
                     }
                 }
