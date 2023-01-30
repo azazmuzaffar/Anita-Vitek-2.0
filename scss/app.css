@@ -26,6 +26,25 @@ body {
   margin: 0;
   padding: 0;
 }
+body.page-contact .container {
+  max-width: 74%;
+}
+@media (max-width: 992px) {
+  body.page-contact .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+body.page-contact .container-fluid {
+  padding: 0;
+}
+body.page-contact .container-fluid [class^=row] {
+  padding: 0;
+  margin: 0;
+}
+body.page-contact .container-fluid [class^=col-] {
+  padding: 0;
+}
 
 h1,
 h2,
@@ -423,6 +442,171 @@ li {
   font-family: "Poppins", sans-serif;
   font-size: 2.2vw;
   font-weight: 500;
+}
+
+.contact-banner {
+  position: relative;
+}
+.contact-banner .image-wrapper {
+  max-width: 73%;
+  z-index: -1;
+}
+@media (max-width: 992px) {
+  .contact-banner .image-wrapper {
+    max-width: 100%;
+  }
+}
+.contact-banner .image-wrapper .image-ratio {
+  padding-top: 64%;
+  border-bottom-right-radius: 40px;
+}
+@media (max-width: 768px) {
+  .contact-banner .image-wrapper .image-ratio {
+    padding-top: 67%;
+  }
+}
+.contact-banner .image-wrapper .image-ratio img {
+  width: 0;
+  transform: scale(1.5);
+}
+.contact-banner .content-block {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  padding: 140px 0;
+  z-index: 9;
+}
+@media (max-width: 1200px) {
+  .contact-banner .content-block {
+    padding: 100px 0;
+  }
+}
+@media (max-width: 1200px) {
+  .contact-banner .content-block {
+    padding: 70px 0;
+  }
+}
+.contact-banner .content-block__inner {
+  max-width: 34.8vw;
+  min-width: 34.8vw;
+  margin-left: auto;
+}
+@media (max-width: 1200px) {
+  .contact-banner .content-block__inner {
+    max-width: 34.5vw;
+    min-width: 34.5vw;
+  }
+}
+@media (max-width: 768px) {
+  .contact-banner .content-block__inner {
+    max-width: 100%;
+    min-width: 100%;
+    text-align: center;
+  }
+}
+.contact-banner .content-block__inner h1 {
+  color: black;
+  font-family: "Playfair Display", serif;
+  font-size: 4.4vw;
+  margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+  .contact-banner .content-block__inner h1 {
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+}
+.contact-banner .content-block__inner p {
+  font-size: 1.33vw;
+  text-transform: uppercase;
+  color: black;
+}
+@media (max-width: 768px) {
+  .contact-banner .content-block__inner p {
+    font-size: 22px;
+  }
+}
+
+.contact-details {
+  margin-top: 5%;
+}
+@media (max-width: 992px) {
+  .contact-details {
+    margin-top: 0;
+  }
+}
+.contact-details .content-wrapper {
+  height: 100%;
+  padding: 40px 10%;
+}
+@media (max-width: 992px) {
+  .contact-details .content-wrapper {
+    padding: 60px 10%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+.contact-details .content-wrapper .contact-details__top {
+  margin-bottom: 50px;
+}
+.contact-details .content-wrapper .contact-details__top h1 {
+  color: black;
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+.contact-details .content-wrapper .contact-details__top p {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: black;
+}
+.contact-details .content-wrapper .contact-details__each:not(:last-child) {
+  margin-bottom: 60px;
+}
+@media (max-width: 576px) {
+  .contact-details .content-wrapper .contact-details__each:not(:last-child) {
+    margin-bottom: 48px;
+  }
+}
+.contact-details .content-wrapper .contact-details__each h5,
+.contact-details .content-wrapper .contact-details__each a {
+  color: black;
+}
+.contact-details .content-wrapper .contact-details__each h5 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+@media (max-width: 1200px) {
+  .contact-details .content-wrapper .contact-details__each h5 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+}
+.contact-details .content-wrapper .contact-details__each a {
+  font-size: 20px;
+}
+@media (max-width: 1200px) {
+  .contact-details .content-wrapper .contact-details__each a {
+    font-size: 16px;
+  }
+}
+.contact-details .image-wrapper .image-ratio {
+  padding-top: 74%;
+  overflow: hidden;
+}
+@media (max-width: 576px) {
+  .contact-details .image-wrapper .image-ratio {
+    padding-top: 63%;
+  }
+}
+.contact-details .image-wrapper .image-ratio img {
+  transition: 4.5s all ease;
+}
+.contact-details .image-wrapper .image-ratio img:hover {
+  transform: scale(1.1);
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<  */

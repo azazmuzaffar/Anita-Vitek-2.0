@@ -35,6 +35,30 @@ body {
     font-weight: 400;
     margin: 0;
     padding: 0;
+
+    &.page-contact {
+        .container {
+            max-width: 74%;
+
+            @media (max-width: 992px) {
+                max-width: 100%;
+                padding: 0 20px;
+            }
+        }
+
+        .container-fluid {
+            padding: 0;
+
+            [class^="row"] {
+                padding: 0;
+                margin: 0;
+            }
+
+            [class^="col-"] {
+                padding: 0;
+            }
+        }
+    }
 }
 
 h1,
@@ -495,6 +519,180 @@ li {
         }
     }
 }
+
+
+.contact-banner {
+    position: relative;
+
+    .image-wrapper {
+        max-width: 73%;
+        z-index: -1;
+
+        @media (max-width: 992px) {
+            max-width: 100%;
+        }
+
+        .image-ratio {
+            padding-top: 64%;
+            border-bottom-right-radius: 40px;
+
+            @media (max-width: 768px) {
+                padding-top: 67%;
+            }
+
+            img {
+                width: 0;
+                transform: scale(1.5);
+            }
+        }
+    }
+
+    .content-block {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        padding: 140px 0;
+        z-index: 9;
+
+        @media (max-width: 1200px) {
+            padding: 100px 0;
+        }
+
+        @media (max-width: 1200px) {
+            padding: 70px 0;
+        }
+
+        &__inner {
+            max-width: 34.8vw;
+            min-width: 34.8vw;
+            margin-left: auto;
+
+            @media (max-width: 1200px) {
+                max-width: 34.5vw;
+                min-width: 34.5vw;
+            }
+
+            @media (max-width: 768px) {
+                max-width: 100%;
+                min-width: 100%;
+                text-align: center;
+            }
+
+            h1 {
+                color: $black;
+                font-family: $font-playfare;
+                font-size: 4.4vw;
+                margin-bottom: 15px;
+
+                @media (max-width: 768px) {
+                    font-size: 40px;
+                    margin-bottom: 25px;
+                }
+            }
+
+            p {
+                font-size: 1.33vw;
+                text-transform: uppercase;
+                color: $black;
+
+                @media (max-width: 768px) {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
+.contact-details {
+    margin-top: 5%;
+
+    @media (max-width: 992px) {
+        margin-top: 0;
+    }
+
+    .content-wrapper {
+        height: 100%;
+        padding: 40px 10%;
+
+        @media (max-width: 992px) {
+            padding: 60px 10%;
+            height: fit-content;
+        }
+
+        .contact-details__top {
+            margin-bottom: 50px;
+
+            h1 {
+                color: $black;
+                font-family: $font-playfare;
+                font-size: 48px;
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 18px;
+                text-transform: uppercase;
+                color: $black;
+            }
+        }
+
+        .contact-details__each {
+            &:not(:last-child) {
+                margin-bottom: 60px;
+
+                @media (max-width: 576px) {
+                    margin-bottom: 48px;
+                }
+            }
+
+            h5,
+            a {
+                color: $black;
+            }
+
+            h5 {
+                font-size: 20px;
+                font-weight: bold;
+                margin-bottom: 8px;
+
+                @media (max-width: 1200px) {
+                    font-size: 16px;
+                    margin-bottom: 5px;
+                }
+
+            }
+
+            a {
+                font-size: 20px;
+
+                @media (max-width: 1200px) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .image-wrapper {
+        .image-ratio {
+            padding-top: 74%;
+            overflow: hidden;
+
+            @media (max-width: 576px) {
+                padding-top: 63%;
+            }
+
+            img {
+                transition: 4.5s all ease;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
 
 /* >>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<<<<<< */
