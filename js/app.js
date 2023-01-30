@@ -55,23 +55,6 @@ $(document).ready(function () {
 });
 
 // ---------------------------------------
-//  Contact Banner
-// ---------------------------------------
-
-AOS.init({
-  once: true,
-});
-
-var tl = gsap.timeline({
-  defaults: {
-    duration: 1.0,
-    ease: "expo.inOut",
-  },
-});
-
-tl.to(".contact-banner img", { width: 100 + "%", scale: 1 });
-
-// ---------------------------------------
 //  Horizental/Smooth Scroll
 // ---------------------------------------
 

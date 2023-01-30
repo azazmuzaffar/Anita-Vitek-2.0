@@ -465,10 +465,6 @@ li {
     padding-top: 67%;
   }
 }
-.contact-banner .image-wrapper .image-ratio img {
-  width: 0;
-  transform: scale(1.5);
-}
 .contact-banner .content-block {
   position: absolute;
   width: 100%;
@@ -530,6 +526,7 @@ li {
 
 .contact-details {
   margin-top: 5%;
+  padding-bottom: 80px;
 }
 @media (max-width: 992px) {
   .contact-details {
@@ -573,6 +570,7 @@ li {
 .contact-details .content-wrapper .contact-details__each h5,
 .contact-details .content-wrapper .contact-details__each a {
   color: black;
+  text-decoration: none;
 }
 .contact-details .content-wrapper .contact-details__each h5 {
   font-size: 20px;
@@ -601,12 +599,6 @@ li {
   .contact-details .image-wrapper .image-ratio {
     padding-top: 63%;
   }
-}
-.contact-details .image-wrapper .image-ratio img {
-  transition: 4.5s all ease;
-}
-.contact-details .image-wrapper .image-ratio img:hover {
-  transform: scale(1.1);
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<  */
