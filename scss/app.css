@@ -5,7 +5,6 @@
 /* ---------- Fonts ----------- */
 /*-----------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 /*-----------------------------*/
 /* ------- Generic CSS -------- */
 /*-----------------------------*/
@@ -281,6 +280,25 @@ li {
 .design-concept .concept__each .icon-wrapper {
   text-align: center;
 }
+.design-concept .concept__each .icon-wrapper svg path {
+  fill: none;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+.design-concept .concept__each .icon-wrapper.animate svg path {
+  -webkit-animation: draw 3s linear forwards;
+  animation: draw 3s linear forwards;
+}
+@-webkit-keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 .design-concept .concept__each .image-wrapper,
 .design-concept .concept__each .image-ratio {
   overflow: hidden;
@@ -289,9 +307,21 @@ li {
   transition: 4.5s all ease;
   filter: grayscale(0.4);
 }
-.design-concept .concept__each .image-ratio img:hover {
-  transform: scale(1.1);
-  filter: grayscale(0);
+.design-concept .concept__each .image-ratio img.scale {
+  -webkit-animation: scale 3s linear forwards;
+          animation: scale 3s linear forwards;
+}
+@-webkit-keyframes scale {
+  to {
+    transform: scale(1.04);
+    filter: grayscale(0);
+  }
+}
+@keyframes scale {
+  to {
+    transform: scale(1.04);
+    filter: grayscale(0);
+  }
 }
 .design-concept .concept__each--1 {
   position: relative;
@@ -374,6 +404,14 @@ li {
   flex-direction: column;
   height: 100%;
 }
+.design-concept .concept__each--3 .icons .icon-wrapper--1 svg #triangle3 {
+  transition: 1s all ease;
+  fill: white;
+  opacity: 0;
+}
+.design-concept .concept__each--3 .icons .icon-wrapper--1.animate svg #triangle3 {
+  opacity: 1;
+}
 .design-concept .concept__each--3 .icons .icon-wrapper--2 {
   margin-top: auto;
   margin-bottom: 17%;
@@ -439,9 +477,7 @@ li {
   padding: 20px 0;
 }
 .design-concept .concept__each-left .content-block .text-wrapper h3 {
-  font-family: "Poppins", sans-serif;
   font-size: 2.2vw;
-  font-weight: 500;
 }
 
 .contact-banner {
@@ -531,6 +567,11 @@ li {
 @media (max-width: 992px) {
   .contact-details {
     margin-top: 0;
+  }
+}
+@media (max-width: 576px) {
+  .contact-details {
+    padding-bottom: 0px;
   }
 }
 .contact-details .content-wrapper {

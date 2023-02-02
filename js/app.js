@@ -108,81 +108,26 @@ window.addEventListener("load", function () {
   ScrollTrigger.refresh();
 });
 
-/* Onload 1st Slide Icon Triangle Animation */
-var triangle = document.getElementById("triangle1");
-var triangle2 = document.getElementById("triangle2");
-var length = triangle.getTotalLength();
-var length2 = triangle2.getTotalLength();
-triangle.style.strokeDasharray = length;
-triangle2.style.strokeDasharray = length2;
-triangle.style.strokeDashoffset = length;
-triangle2.style.strokeDashoffset = length2;
-function incNbrRec(i, endNbr, elt) {
-  if (i >= endNbr) {
-    triangle.style.strokeDashoffset = i;
-    triangle2.style.strokeDashoffset = i;
-    setTimeout(function () {
-      incNbrRec(i - 1, endNbr, elt);
-    }, 5);
-  }
-}
-
-incNbrRec(262, 0, triangle);
-incNbrRec(262, 0, triangle2);
-
-/* Slide # 1: Icon draw/undraw animation */
+/* Icon draw/undraw animation */
+$(".concept__each--1 img").addClass("scale");
 scroller.on("scroll", ({ limit, scroll }) => {
-  if (scroll.y > 797) {
-    var triangle = document.getElementById("triangle1");
-    var triangle2 = document.getElementById("triangle2");
-    var length = triangle.getTotalLength();
-    var length2 = triangle2.getTotalLength();
-    triangle.style.strokeDasharray = length;
-    triangle2.style.strokeDasharray = length2;
-    triangle.style.strokeDashoffset = length;
-    triangle2.style.strokeDashoffset = length2;
-    var draw = (length * scroll.y) / 800;
-    triangle.style.strokeDashoffset = length + draw;
-    triangle2.style.strokeDashoffset = length + draw;
-  }
+  console.log(limit, scroll.y);
 
-  /* Slide # 2: Icon draw/undraw animation */
-  if (scroll.y > 800) {
-    var triangle = document.getElementById("rectangle1");
-    var triangle2 = document.getElementById("rectangle2");
-    var length = triangle.getTotalLength();
-    var length2 = triangle2.getTotalLength();
-    triangle.style.strokeDasharray = length;
-    triangle2.style.strokeDasharray = length2;
-    triangle.style.strokeDashoffset = length;
-    triangle2.style.strokeDashoffset = length2;
-    var draw = (length * scroll.y) / 1200;
-    triangle.style.strokeDashoffset = length + draw;
-    triangle2.style.strokeDashoffset = length - draw;
-  }
+  let each = limit / 3;
+  var triangle = document.getElementById("triangle1");
+  var triangle2 = document.getElementById("triangle2");
+  var rectangle = document.getElementById("rectangle1");
+  var rectangle2 = document.getElementById("rectangle2");
 
-  /* Slide # 3: Icon draw/undraw animation */
-  if (scroll.y > 1600) {
-    var triangle = document.getElementById("triangle4");
-    var triangle2 = document.getElementById("triangle5");
-    var triangle3 = document.getElementById("triangle6");
-    var triangle4 = document.getElementById("triangle7");
-    var length = triangle.getTotalLength();
-    var length2 = triangle2.getTotalLength();
-    var length3 = triangle3.getTotalLength();
-    var length4 = triangle4.getTotalLength();
-    triangle.style.strokeDasharray = length;
-    triangle2.style.strokeDasharray = length2;
-    triangle3.style.strokeDasharray = length3;
-    triangle4.style.strokeDasharray = length4;
-    triangle.style.strokeDashoffset = length;
-    triangle2.style.strokeDashoffset = length2;
-    triangle3.style.strokeDashoffset = length3;
-    triangle4.style.strokeDashoffset = length4;
-    var draw = (length * scroll.y) / 900;
-    triangle.style.strokeDashoffset = length + draw + draw + 55;
-    triangle2.style.strokeDashoffset = length - draw + 950;
-    triangle3.style.strokeDashoffset = length + draw + draw + 28;
-    triangle4.style.strokeDashoffset = length - draw + length + 108;
+  if (scroll.y > 0) {
+    $(".concept__each--1 .icon-wrapper").addClass("animate");
+  }
+  if (scroll.y > each + each / 4) {
+    $(".concept__each--2 img").addClass("scale");
+    $(".concept__each--2 .icon-wrapper").addClass("animate");
+  }
+  if (scroll.y > limit - each / 3) {
+    $(".concept__each--3 img").addClass("scale");
+    $(".concept__each--3 .icon-wrapper").addClass("animate");
   }
 });
